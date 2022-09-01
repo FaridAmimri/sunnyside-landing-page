@@ -4,6 +4,8 @@ import React from 'react'
 import styled from 'styled-components'
 import TransformImg from '../assets/desktop/image-transform.jpg'
 import StandoutImg from '../assets/desktop/image-stand-out.jpg'
+import GraphicDesignImg from '../assets/desktop/image-graphic-design.jpg'
+import PhotographyImg from '../assets/desktop/image-photography.jpg'
 
 function Gallery() {
   return (
@@ -42,6 +44,28 @@ function Gallery() {
             </div>
           </div>
         </article>
+      </div>
+
+      <div className='gallery'>
+        <aside className='graphic-design'>
+          <div className='gallery-content '>
+            <h1>Graphic design</h1>
+            <p>
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </aside>
+        <aside className='photography'>
+          <div className='gallery-content'>
+            <h1>Photography</h1>
+            <p>
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </aside>
       </div>
     </Container>
   )
@@ -95,7 +119,7 @@ const Container = styled.main`
             border-radius: 28px;
             :hover {
               opacity: 1;
-              z-index: -1
+              z-index: -1;
             }
           }
           .yellow {
@@ -110,12 +134,45 @@ const Container = styled.main`
     aside {
       width: 50%;
       height: 600px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .transform {
       background: url(${TransformImg});
     }
     .standout {
       background: url(${StandoutImg});
+    }
+    .graphic-design {
+      background: url(${GraphicDesignImg});
+      color: #19536C;
+    }
+    .photography {
+      background: url(${PhotographyImg});
+      color: #052C3B;
+    }
+
+    .gallery-content {
+      width: 339px;
+      height: 143px;
+      position: absolute;
+      top: 65%;
+      h1 {
+        font-family: 'Fraunces 9pt Soft';
+        font-weight: 900;
+        font-size: 28px;
+        text-align: center;
+        opacity: 0.75;
+      }
+      p {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+      }
     }
   }
 `
